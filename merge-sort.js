@@ -46,4 +46,4 @@ function merge(left, right) {
 
 var para = document.querySelector('p');
 var example = [12, 'test', 11, 7, 13, 14, 47, 88, 113];
-//para.innerHTML = mergeSort(example);
+// para.innerHTML = mergeSort(example);

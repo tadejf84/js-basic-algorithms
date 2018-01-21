@@ -1,4 +1,4 @@
-function equalLetters(str) {
+function findDuplicate(str) {
 
   var letter = str.split('');
 
@@ -7,7 +7,7 @@ function equalLetters(str) {
   var duplicate = [];
 
   for (var i=0; i < letterSort.length; i++ ) {
-    if (letterSort[i] == letterSort[i+1]) {
+    if (letterSort[i] === letterSort[i+1] && letterSort[i] !== ' ') {
       duplicate.push(letterSort[i]);
     }
   }
@@ -17,4 +17,4 @@ function equalLetters(str) {
 
 var para = document.querySelector('p');
 
-//para.innerHTML = equalLetters('dfjdfdkffj');
+// para.innerHTML = findDuplicate('See this example');

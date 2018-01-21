@@ -1,4 +1,4 @@
-function maxWord(str) {
+function longestWord(str) {
 
 	// createe array of words with split method
 	var words = str.split(' ');
@@ -18,4 +18,4 @@ function maxWord(str) {
 
 var para = document.querySelector('p');
 
-//para.innerHTML = maxWord('Testni stavek je krneki');
+// para.innerHTML = longestWord('Test sentence once again');

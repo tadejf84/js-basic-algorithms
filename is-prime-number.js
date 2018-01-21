@@ -20,4 +20,4 @@ function isPrimeNumber(num) {
 }
 
 var para = document.querySelector('p');
-//para.innerHTML = isPrimeNumber(2);
+// para.innerHTML = isPrimeNumber(17);

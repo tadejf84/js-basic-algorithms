@@ -23,5 +23,5 @@ function findPeak(arr) {
 
 var para = document.querySelector('p');
 
-var exampleArr = [8, 6, 7, 7, 111, 12177, 227, 13, 1890, 11, 117, 888];
+// var exampleArr = [8, 6, 7, 7, 111, 12177, 227, 13, 1890, 11, 117, 888];
 // para.innerHTML = findPeak(exampleArr);

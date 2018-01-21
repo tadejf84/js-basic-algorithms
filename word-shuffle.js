@@ -1,4 +1,4 @@
-function shuffle(str) {
+function wordShuffle(str) {
   str = str.split(' ');
 
   var wordShuffle = [];
@@ -13,4 +13,4 @@ function shuffle(str) {
 
 var para = document.querySelector('p');
 
-// para.innerHTML = shuffle('krneki test prav zares');
+// para.innerHTML = wordShuffle('test this awesome sentence');

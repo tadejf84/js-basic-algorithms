@@ -1,7 +1,7 @@
 function stringReverse(str) {
     var output = '';
 
-    if(!str || typeof str != 'string' || str.length < 2 ) {
+    if(!str || typeof str !== 'string' || str.length < 2 ) {
       return str;
     }
 
@@ -14,4 +14,4 @@ function stringReverse(str) {
 
 
 var para = document.querySelector('p');
-//para.innerHTML = stringReverse('example sentence');
+// para.innerHTML = stringReverse('example sentence');

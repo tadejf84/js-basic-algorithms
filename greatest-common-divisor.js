@@ -15,4 +15,4 @@ function greatestCommonDiv(num1, num2) {
 }
 
 var para = document.querySelector('p');
-//para.innerHTML = greatestCommonDiv(21, 14);
+// para.innerHTML = greatestCommonDiv(7, 21);

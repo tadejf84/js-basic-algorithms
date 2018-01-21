@@ -16,4 +16,4 @@ function swapNum(a, b) {
 }
 
 var para = document.querySelector('p');
-//para.innerHTML = swapNum(5, 3);
+// para.innerHTML = swapNum(5, 3);

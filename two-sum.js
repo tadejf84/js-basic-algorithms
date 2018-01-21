@@ -16,4 +16,4 @@ function twoSum(arr, target) {
 
 var para = document.querySelector('p');
 var example = [12, 11, 7, 0, 3, 1, 2, 13, 14, -10, 47, 88, 113];
-//para.innerHTML = twoSum(example, 3);
+// para.innerHTML = twoSum(example, 3);

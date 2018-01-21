@@ -1,4 +1,6 @@
-function filterArray(arr) {
+function isNumber(arr) {
+
+  // USING A FOR LOOP
   // var onlyNum = [];
   // for (var i = 0; i < arr.length; i++) {
   //   if (typeof arr[i] === "number") {
@@ -13,6 +15,8 @@ function filterArray(arr) {
   // }
   // return onlyNum;
 
+
+  // USING FILTER METHOD
   var onlyNum = arr.filter(function(item){
     return typeof item === "number";
   });
@@ -22,5 +26,5 @@ function filterArray(arr) {
 
 var para = document.querySelector('p');
 
-//var exampleArr = ["str", true, 33, 26, "test", 24, "6", 11];
-//para.innerHTML = filterArray(exampleArr);
+// var exampleArr = ["str", true, 33, 26, "test", 24, "6", 11, null, 'test2', 22];
+// para.innerHTML = isNumber(exampleArr);

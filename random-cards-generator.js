@@ -18,15 +18,15 @@ var para = document.querySelector('p');
 function randomCards() {
 
   var suit = ['Diamonds', 'Spades', 'Hearts', 'Clubs'];
-  var card = [2, 3, 4, 5, 6, 7, 8, 9, 'T', 'J', 'Q', 'K', 'A'];
+  var cardValue = [2, 3, 4, 5, 6, 7, 8, 9, 'T', 'J', 'Q', 'K', 'A'];
 
   var randomSuit = Math.floor(Math.random() * suit.length);
-  var randomCard = Math.floor(Math.random() * card.length);
+  var randomCard = Math.floor(Math.random() * cardValue.length);
 
-  var currentCard = card[randomCard] + ' Of ' + suit[randomSuit];
+  var currentCard = cardValue[randomCard] + ' Of ' + suit[randomSuit];
 
   para.innerHTML = currentCard;
 
 }
 
-//btn.addEventListener("click", randomCards);
+// btn.addEventListener("click", randomCards);
