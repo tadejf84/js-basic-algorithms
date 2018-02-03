@@ -8,7 +8,6 @@ function wordShuffle(str) {
   }
 
   return wordShuffle.join(' ');
-
 }
 
 var para = document.querySelector('p');
