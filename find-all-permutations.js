@@ -40,4 +40,4 @@ function findAllPermutations(str) {
 }
 
 var para = document.querySelector('p');
-para.innerHTML = findAllPermutations('try');
+// para.innerHTML = findAllPermutations('try');
