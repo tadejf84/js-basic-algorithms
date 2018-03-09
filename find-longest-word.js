@@ -1,21 +1,27 @@
 function longestWord(str) {
 
-	// createe array of words with split method
-	var words = str.split(' ');
-	var maxLetterCount = 0;
-	var longestWord = '';
+	// filter array for alpha numeric characters only
+	const words = str.toLowerCase().match(/[a-z0-9]+/g);
 
-	// loop throught the array of words
-	for (var i=0; i < words.length; i++) {
+	// sort words by length
+	const sorted = words.sort((a,b) => {
+		return b.length - a.length;
+	});
 
-		if(words[i].length > maxLetterCount) {
-			maxLetterCount = words[i].length;
-			longestWord = words[i].toUpperCase();
-		}
+	// return one or more words with most characters
+	const longestWords = sorted.filter((word) => {
+		return word.length === sorted[0].length;
+	});
+
+	if (longestWords.length > 1) {
+		return 'The longest words are: ' + longestWords + ' and are ' +
+		longestWords[0].length + ' characters long.';
+	} else {
+		return 'The longest word is: ' + longestWords + ' and is ' +
+		longestWords[0].length + ' characters long.';
 	}
-	return longestWord + ' is the longest word and is ' + maxLetterCount + ' characters long.' ;
+
 }
 
 var para = document.querySelector('p');
-
 // para.innerHTML = longestWord('Test sentence once again');
