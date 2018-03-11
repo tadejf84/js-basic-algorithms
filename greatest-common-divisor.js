@@ -1,12 +1,13 @@
 function greatestCommonDiv(num1, num2) {
-  var i;
-  var div = 0;
+  let div = 0;
 
-  if (num1 === 0 || num2 === 0) {
-    div = 'null';
+  /* check user input */
+  if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+    return 'Input not a number!';
   }
+  if (num1 === 0 || num2 === 0) { div = 'null'; }
 
-  for (i = 0; i <= num1; i++) {
+  for (let i = 0; i <= num1; i++) {
     if (num1%i === 0 && num2%i === 0) {
       div = i;
     }

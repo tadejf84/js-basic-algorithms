@@ -1,34 +1,32 @@
-// FIND MISSING NUMBER WITH SORTING
+/* find missing number with sorting */
 function findMissingNum1(arr) {
-  var n = arr.length + 1;
+  let sorted = [];
+  const n = arr.length + 1;
 
-  // FUNCTION MERGE SORT DEFINED IN ANOTHER JS FILE
-  var sorted = mergeSort(arr);
-  var i;
+  /* sort the array */
+  sorted = arr.sort();
 
-  for (i = 0; i < n; i++) {
-    if(sorted[i] + 2 === sorted[i+1]) {
+  /* return the missing number in the arr */
+  for (let i = 0; i < n; i++) {
+    if(sorted[i] + 2  === sorted[i+1]) {
       return sorted[i+1] - 1;
     }
   }
 }
 
-// FIND MISSING NUMBER WITHOUT SORTING
+/* find missing number without sorting */
 function findMissingNum2(arr) {
-  var i;
-  var n = arr.length + 1;
-  var actualSum = 0;
+  const n = arr.length + 1;
 
-  // FORMULA FOR EXPECTED SUM OF ARRAY LENGTH + 1
-  var expectedSum = n * (n+1) / 2;
+  /* formula for expected sum of arr length + 1 */
+  const expectedSum = n * (n + 1) / 2;
 
-  // GET ACTUAL SUM OF ALL ARRAY ELEMENTS
-  for (i = 0; i < arr.length; i++) {
-    actualSum += arr[i];
-  }
+  /* get actual sum of all elements in the arr */
+  const actualSum = arr.reduce((a, b) => {
+    return a + b;
+  }, 0);
 
   return expectedSum - actualSum;
-
 }
 
 var para = document.querySelector('p');

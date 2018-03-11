@@ -1,13 +1,17 @@
 function findDuplicate(str) {
+  let duplicate = [];
 
-  var letter = str.split('');
+    /* get only alphanumeric chars, to lower case and split string to arary */
+  const letter = str.replace(/[^a-z0-9]/gi,'')
+                .toLowerCase()
+                .split('');
 
-  var letterSort = letter.sort();
+  /* sort the array alphabettically */
+  const letterSort = letter.sort();
 
-  var duplicate = [];
-
-  for (var i=0; i < letterSort.length; i++ ) {
-    if (letterSort[i] === letterSort[i+1] && letterSort[i] !== ' ') {
+  /* loop through the arr and push duplicate values into duplicate arr */
+  for (let i = 0; i < letterSort.length; i++ ) {
+    if (letterSort[i] === letterSort[i+1]) {
       duplicate.push(letterSort[i]);
     }
   }
@@ -16,5 +20,4 @@ function findDuplicate(str) {
 }
 
 var para = document.querySelector('p');
-
 // para.innerHTML = findDuplicate('See this example');

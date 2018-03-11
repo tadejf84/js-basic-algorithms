@@ -1,18 +1,17 @@
 function swapNum(a, b) {
 
-    // with temp
-    // var temp;
-    // temp = a;
-    // a = b;
-    // b = temp;
+  // with temp
+  // let temp;
+  // temp = a;
+  // a = b;
+  // b = temp;
 
-    // without temp
-    b = b - a;
-    a = a + b;
-    b = a - b;
+  // without temp
+  b = b - a;
+  a = a + b;
+  b = a - b;
 
-    return 'swapped a = ' + a + ', b = ' + b;
-
+  return 'swapped first = ' + a + ', second = ' + b;
 }
 
 var para = document.querySelector('p');

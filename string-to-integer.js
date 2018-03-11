@@ -1,18 +1,18 @@
 function stringToInt(str) {
-  var arr = str.split('');
-  var sum = 0;
+  let sum = 0;
+  const arr = str.split('');
 
-  // USING A FOR LOOP
-  // for (var i=0; i < arr.length; i++) {
-  //   sum += parseInt(arr[i])*Math.pow(10, arr.length-i-1 );
+  // using a for loop
+  // for (let i = 0; i < arr.length; i++) {
+  //   sum += arr[i] * Math.pow(10, arr.length - i - 1);
   // }
 
-  // USING MAP METHOD
-  var int = arr.map(function(currElement, index){
-    sum += currElement*Math.pow(10, arr.length-index-1);
+  // using map method
+  arr.map((currElement, index) => {
+    sum += currElement * Math.pow(10, arr.length - index - 1);
   });
 
-  return sum;
+  return sum + ' is a ' + typeof sum;
 }
 
 var para = document.querySelector('p');

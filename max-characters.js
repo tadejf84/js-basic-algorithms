@@ -1,35 +1,37 @@
 function maxChar(str){
+  let charCount = {},
+      maxCount = 0,
+      maxIndex;
 
-  // declare object for tracking character count
-  let charCount = {};
+  /* string to lower case, only alphanumerical, split to array */
+  let strArr = str.toLowerCase()
+                  .replace(/[^a-z0-9]/gi,'')
+                  .split('');
 
-  // string to lower case and convert into array
-  let strArr = str.toLowerCase().split('');
-
-  // loop through the string array
+  /*
+  loop through the string array
+  increment by one if char already exists in charCount
+  else initialize to 1
+  */
   for(let char of strArr) {
-    if (charCount[char] && char != ' ') {
+    if (charCount[char]) {
       charCount[char]++;
     } else {
-      if (char != ' ') {
-        charCount[char] = 1;
-      }
+      charCount[char] = 1;
     }
   }
 
-  // loop through the charCount object
-  let maxCount = 0;
-  let maxIndex;
-
+  /*
+  loop through the charCount object,
+  look for the char with the highest count
+  */
   for (let char in charCount) {
     if (charCount[char] > maxCount) {
       maxCount = charCount[char];
       maxIndex = char;
     }
   }
-
   return 'The character with the most frequent occurence is ' + maxIndex + ' and can be found ' + maxCount + ' times in this example!';
-
 }
 
 var para = document.querySelector('p');

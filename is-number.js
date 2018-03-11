@@ -1,30 +1,23 @@
 function isNumber(arr) {
+  let onlyNum = [];
 
-  // USING A FOR LOOP
-  // var onlyNum = [];
-  // for (var i = 0; i < arr.length; i++) {
+  /* using a while loop */
+  // let i = 0;
+  // while (i < arr.length) {
   //   if (typeof arr[i] === "number") {
-  //     if (i >= 1) {
-  //       // make spaces after commas
-  //       onlyNum.push(' ' + arr[i]);
-  //     } else {
-  //       // no spaces if first
-  //       onlyNum.push(arr[i]);
-  //     }
+  //     onlyNum.push(arr[i]);
   //   }
+  //   i++;
   // }
-  // return onlyNum;
 
-
-  // USING FILTER METHOD
-  var onlyNum = arr.filter(function(item){
-    return typeof item === "number";
+  /* using the array filter method*/
+  onlyNum = arr.filter(el => {
+    return typeof el === "number";
   });
-  return onlyNum;
 
+  return onlyNum;
 }
 
 var para = document.querySelector('p');
-
-// var exampleArr = ["str", true, 33, 26, "test", 24, "6", 11, null, 'test2', 22];
+var exampleArr = ["str", true, 33, 26, "test", 24, "6", 11, null, 'test2', 22];
 // para.innerHTML = isNumber(exampleArr);

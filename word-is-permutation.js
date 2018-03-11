@@ -5,5 +5,4 @@ function isPermutation(str1, str2) {
 }
 
 var para = document.querySelector('p');
-
 // para.innerHTML = isPermutation('test', 'tset');

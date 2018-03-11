@@ -4,36 +4,23 @@ a word, phrase, or sequence that reads the same backwards as forwards,
 */
 
 function checkIfPalindrome(str) {
-  // GET ONLY ALPHANUMERIC CHARACTERS AND TO LOWERCASE
+  let strSplit = [],
+      strReverse = [];
+
+  /* get only alphanumeric chars, to lower case and split string to arary */
   str = str.replace(/[^a-z0-9]/gi,'').toLowerCase();
+  const len = str.length;
+  strSplit = str.split('');
 
-  // DEFINE VARIABLES
-  var strSplit = str.split('');
-  var strReverse = [];
-  var i;
-  var len = str.length;
+  /* initial input check */
+  if ( len < 1 ) { return 'invalid input'; }
+  if ( len === 1) { return true; }
 
-  // CHECK IF EMPTY STRING
-  if ( str === '' ) {
-    return 'invalid input';
-  }
+  /* reverse string */
+  strReverse = strSplit.reverse();
 
-  // CHECK IF STRING HAS ONLY 1 CHAR
-  if ( len < 2) {
-    return true;
-  }
-
-  // REVERSE STRING
-  for (i = len - 1; i >= 0; i--) {
-    strReverse.push(strSplit[i]);
-  }
-
-  // COMPARE THE STRINGS
-  if (str === strReverse.join('')) {
-    return true;
-  } else {
-    return false;
-  }
+  /* compare the two strings */
+  return str === strReverse.join('') ? true : false;
 
 }
 

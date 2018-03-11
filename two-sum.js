@@ -1,9 +1,15 @@
 function twoSum(arr, target) {
-  var i = 0;
-  var j;
-  var output = [];
-  while (i < arr.length) {
-    for (j = i+1; j < arr.length; j++) {
+  let i = 0, j,
+      output = [];
+  const len = arr.length;
+
+  /*
+  loop throught the whole array
+  if current arr element value is equal to target value minus any of the element values of the rest of the array
+  push both array elements into the output array
+  */
+  while (i < len) {
+    for (j = i + 1; j < len; j++) {
       if (arr[j] == target - arr[i]) {
         output.push('[' + arr[i], arr[j] + ']');
       }

@@ -1,9 +1,11 @@
 function firstNonRepeatingChar(str) {
-  str = str.split('');
-  var count = [];
-  var char, i, j;
+  let char, count = [];
 
-  for (i=0; i < str.length; i++) {
+  /*
+  loop through string arr and increment by 1 if exists,
+  else init value to 1
+  */
+  for (let i in str) {
     char = str[i];
     if (!count[char]) {
       count[char] = 1;
@@ -12,12 +14,12 @@ function firstNonRepeatingChar(str) {
     }
   }
 
-  for (j in count) {
+  /* if count is 1 return the first not repeating char */
+  for (let j in count) {
     if (count[j] === 1) {
       return j;
     }
   }
-
 }
 
 var para = document.querySelector('p');

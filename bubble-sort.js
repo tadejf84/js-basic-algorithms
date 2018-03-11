@@ -1,15 +1,22 @@
 function bubbleSort(arr){
-  var len = arr.length;
+  const len = arr.length;
+
   for (let i = len - 1; i >= 0; i--){
     for(let j = 0; j <= i; j++) {
       if(arr[j-1] > arr[j]) {
-        let temp = arr[j-1];
-        arr[j-1] = arr[j];
-        arr[j] = temp;
+        swap(arr, j-1, j);
       }
     }
   }
+
   return arr;
+}
+
+// helper function
+function swap(arr, a, b) {
+  var temp = arr[a];
+  arr[a] = arr[b];
+  arr[b] = temp;
 }
 
 var para = document.querySelector('p');

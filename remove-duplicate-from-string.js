@@ -1,22 +1,26 @@
 function removeDuplicateLettersFromString(str) {
-  str = str.split('');
-  var len = str.length;
-  var i, el;
-  var exists = {};
-  var output = [];
+  let el,
+      exists = {},
+      output = [];
 
-  for (i = 0; i < len; i++) {
-    el = str[i];
-    if(!exists[el] && el !== ' ') {
+  /* only alpha numerical, to lowercase, split to array */
+  str = str.replace(/[^a-z0-9]/gi,'').toLowerCase().split('');
+
+  /*
+  loop through the array
+  if element does not exist, push into output array
+  */
+  for (let i of str) {
+    el = i;
+    if(!exists[el]) {
       output.push(el);
       exists[el] = true;
     }
   }
 
+  /* join array to string */
   return output.join('');
-
 }
-
 
 var para = document.querySelector('p');
 var example = 'this is an example sentence';

@@ -1,18 +1,13 @@
 function isPrimeNumber(num) {
 
-  if (typeof num !== 'number') {
-    return 'This is not a number!';
-  }
+  /* check user input */
+  if (typeof num !== 'number') { return 'Input not a number!'; }
 
-  if (num === 1) {
-    return true;
-  }
-  if (num === 2) {
-    return false;
-  }
+  if (num === 1) { return true; }
+  if (num === 2) { return false; }
 
-  for (var i=2; i < num; i++ ) {
-    if (num%i === 0 ) {
+  for (let i = 2; i < num; i++ ) {
+    if (num % i === 0 ) {
       return false;
     }
   }

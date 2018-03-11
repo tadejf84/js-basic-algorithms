@@ -1,30 +1,28 @@
 function findSumOfTwo(arr) {
-  var i;
-  var largest = 0;
-  var second = 0;
-  var n = arr.length;
+  let largest = 0,
+      second = 0;
+  const len = arr.length;
 
-  // CHECK IF LESS THAN 2 NUMBERS IN ARRAY
-  if (n < 2) {
-    return 'Your array is too short!';
-  }
+  // check initial input
+  if (len < 2) { return 'Your array is too short!'; }
 
-  for (i = 0; i < n; i++) {
-    // TEST IF ARRAY ELEMENT IS A NUMBER
-    if ( typeof arr[i] === 'number') {
-      // GET LARGEST 2 NUMBERS
-      if(arr[i] >= largest) {
+  for (let el of arr) {
+    // check if arr element is a number
+    if (typeof el === 'number') {
+      // get 2 largest numbers
+      if (el >= largest) {
         second = largest;
-        largest = arr[i];
-      } else if (arr[i] >= second) {
-        second = arr[i];
+        largest = el;
+      } else if (el >= second) {
+        second = el;
+      } else {
+        continue;
       }
     }
   }
-
   return largest + second;
-
 }
 
 var para = document.querySelector('p');
-// para.innerHTML = findSumOfTwo([1, 37, 33, 69, 6, 91, 8, 10]);
+var exampleArr = [1, 37, 33, 69, 6, 91, 8, 10];
+// para.innerHTML = findSumOfTwo(exampleArr);

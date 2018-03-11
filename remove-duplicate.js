@@ -1,10 +1,8 @@
 function removeDuplicate(arr) {
-  var exists = {};
-  var el, i;
-  var arr2 = [];
+  let el, exists = {}, arr2 = [];
 
-  // USING A FOR LOOP
-  for (i = 0; i < arr.length; i++) {
+  /* using a for loop */
+  for (let i in arr) {
     el = arr[i];
     if(!exists[el]) {
       arr2.push(el);
@@ -12,10 +10,10 @@ function removeDuplicate(arr) {
     }
   }
 
-  // USING MAP METHOD
-  // arr.map(function(item) {
-  //   if (arr2.indexOf(item) === -1) {
-  //     arr2.push(item);
+  /* using map method */
+  // arr.map(el => {
+  //   if (arr2.indexOf(el) === -1) {
+  //     arr2.push(el);
   //   }
   // });
 
