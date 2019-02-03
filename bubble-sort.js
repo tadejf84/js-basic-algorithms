@@ -1,3 +1,6 @@
+/*
+* array bubble sorting algorithm
+*/
 function bubbleSort(arr){
   const len = arr.length;
 
@@ -12,7 +15,7 @@ function bubbleSort(arr){
   return arr;
 }
 
-// helper function
+// helper function to swap elements
 function swap(arr, a, b) {
   let temp = arr[a];
   arr[a] = arr[b];
