@@ -38,7 +38,7 @@
 	<script src="array-chunking.js"></script>
 
 	<script>
-		document.addEventListener("DOMContentLoaded",()=>{
+		document.addEventListener("DOMContentLoaded", () => {
 			
 			// array chunking
 			const arrayChunking = arrChunk([12, 11, 7, 13, 14, 16, 2, 22, 4], 2);
@@ -59,6 +59,10 @@
 			// find duplicates
 			const findDuplicates = findDuplicate('See this example');
 			console.log(`Duplicated letters: ${findDuplicates}`);
+
+			// find max value in array
+			const findMaxVal = findMax([6, 7, 111, 12177, 227, 13, 1890, 11]);
+			console.log(`Largest number in array: ${findMaxVal}`);
 
 		});
 	</script>
