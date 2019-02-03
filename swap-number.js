@@ -1,3 +1,6 @@
+/*
+* swap a number
+*/
 function swapNum(a, b) {
 
   // with temp
@@ -11,8 +14,7 @@ function swapNum(a, b) {
   a = a + b;
   b = a - b;
 
-  return 'swapped first = ' + a + ', second = ' + b;
+  return [a, b];
 }
 
-var para = document.querySelector('p');
-// para.innerHTML = swapNum(5, 3);
+
