@@ -1,3 +1,6 @@
+/*
+* find sum of two largest numbers in array
+*/
 function findSumOfTwo(arr) {
   let largest = 0,
       second = 0;
@@ -22,7 +25,3 @@ function findSumOfTwo(arr) {
   }
   return largest + second;
 }
-
-var para = document.querySelector('p');
-var exampleArr = [1, 37, 33, 69, 6, 91, 8, 10];
-// para.innerHTML = findSumOfTwo(exampleArr);
