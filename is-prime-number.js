@@ -1,8 +1,10 @@
+/*
+* check if number is prime
+*/
 function isPrimeNumber(num) {
 
-  /* check user input */
+  // initial input check
   if (typeof num !== 'number') { return 'Input not a number!'; }
-
   if (num === 1) { return true; }
   if (num === 2) { return false; }
 
@@ -14,5 +16,3 @@ function isPrimeNumber(num) {
   return true;
 }
 
-var para = document.querySelector('p');
-// para.innerHTML = isPrimeNumber(17);
