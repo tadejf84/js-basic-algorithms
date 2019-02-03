@@ -1,3 +1,6 @@
+/*
+* split array into chunks
+*/
 function arrChunk(arr, len) {
   const chunkedArr = [];
   let i = 0;
