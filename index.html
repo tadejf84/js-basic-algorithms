@@ -6,10 +6,7 @@
 </head>
 <body>
 
-
-	<p>Uncomment the last line of code to see the output</p>
-	<button type="button" name="button" id="btn">Click me</button>
-
+	<!-- all scripts -->
 	<script src="find-longest-word.js"></script>
 	<script src="find-duplicate-letters.js"></script>
 	<script src="word-is-permutation.js"></script>
@@ -134,9 +131,13 @@
 			// is word permutation
 			const isWordPermutation = isPermutation('test', 'tset');
 			console.log(`Is word permutation: ${isWordPermutation}`);
-				
+
+			// shuffle words in sentence
+			const wordShuffled = wordShuffle('test this awesome sentence');
+			console.log(`Words shuffled: ${wordShuffled}`);
 
 		});
 	</script>
+	
 </body>
 </html>
