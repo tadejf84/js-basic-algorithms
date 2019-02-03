@@ -6,6 +6,7 @@
 </head>
 <body>
 
+
 	<p>Uncomment the last line of code to see the output</p>
 	<button type="button" name="button" id="btn">Click me</button>
 
@@ -35,5 +36,28 @@
 	<script src="insertion-sort.js"></script>
 	<script src="max-characters.js"></script>
 	<script src="array-chunking.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded",()=>{
+			
+			// array chunking
+			const arrayChunking = arrChunk([12, 11, 7, 13, 14, 16, 2, 22, 4], 2);
+			console.log(`Chunked array: ${arrayChunking}`);
+
+			// bubble sort
+			const bubbleSorting = bubbleSort([12, 11, 7, 13, 14, 16, 2, 22, 4]);
+			console.log(`Bubble sorted array: ${bubbleSorting}`);
+
+			// check if palindrome
+			const checkPalindrome = checkIfPalindrome('A new order began, a more Roman age bred Rowena.');
+			console.log(`Is word a palindrome: ${checkPalindrome}`);
+
+			// find all permutations
+			const findPermutations = findAllPermutations('try');
+			console.log(`All permutations of the entered word: ${findPermutations}`);
+
+
+		});
+	</script>
 </body>
 </html>

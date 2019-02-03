@@ -14,11 +14,8 @@ function bubbleSort(arr){
 
 // helper function
 function swap(arr, a, b) {
-  var temp = arr[a];
+  let temp = arr[a];
   arr[a] = arr[b];
   arr[b] = temp;
 }
 
-var para = document.querySelector('p');
-var example = [12, 11, 7, 13, 14, 16, 2, 22];
-// para.innerHTML = bubbleSort(example);
