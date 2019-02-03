@@ -1,4 +1,6 @@
-// selection sort with 2 loops
+/*
+* selection sort with 2 for loops
+*/
 function selectionSort1(arr){
   let min;
   const len = arr.length;
@@ -15,19 +17,20 @@ function selectionSort1(arr){
   return arr;
 }
 
-// selection sort recursive
+/*
+* selection sort recursive
+*/
 function selectionSort2(arr, startIndex) {
   let minIndex;
   const len = arr.length;
 
-  /* if startIndex is not defined, set it to 0 */
+  // if startIndex is not defined, set it to 0
   if (startIndex == null) { startIndex = 0 }
 
   /*
-  while startIndex is lower than array length
-  loop through array
-  if current iteration lower array value lower than lowest value
-  swap lowest value with startIndex value -> lowest value goes to the beginning of the array
+  * while startIndex is lower than array length continue looping
+  * if current iteration lower array value lower than lowest value
+  * swap lowest value with startIndex value -> lowest value goes to the beginning of the array
   */
   while (startIndex < len - 1) {
     minIndex = startIndex;
@@ -51,7 +54,3 @@ function swap(arr, i, min) {
   arr[min] = temp;
 }
 
-var para = document.querySelector('p');
-var example = [12, 11, 7, 13, 14, 16, 2, 22];
-// para.innerHTML = selectionSort1(example);
-// para.innerHTML = selectionSort2(example);
