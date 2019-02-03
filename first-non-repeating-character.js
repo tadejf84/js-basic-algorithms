@@ -1,10 +1,10 @@
+/*
+* find first non repeating character in string
+*/
 function firstNonRepeatingChar(str) {
-  let char, count = [];
+  let char, count = {};
 
-  /*
-  loop through string arr and increment by 1 if exists,
-  else init value to 1
-  */
+  // loop through string arr and increment by 1 if exists, else init value to 1
   for (let i in str) {
     char = str[i];
     if (!count[char]) {
@@ -14,7 +14,7 @@ function firstNonRepeatingChar(str) {
     }
   }
 
-  /* if count is 1 return the first not repeating char */
+  // if count is 1 return the first not repeating char
   for (let j in count) {
     if (count[j] === 1) {
       return j;
@@ -22,6 +22,3 @@ function firstNonRepeatingChar(str) {
   }
 }
 
-var para = document.querySelector('p');
-var example = 'test this awesome sentence';
-// para.innerHTML = firstNonRepeatingChar(example);
