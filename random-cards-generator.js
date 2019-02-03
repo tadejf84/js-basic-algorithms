@@ -1,27 +1,30 @@
-const btn = document.querySelector('#btn');
-var para = document.querySelector('p');
 
-// card suit only
-// function randomCards() {
+/*
+* card suit randomly generated
+*/
+// function randomCards1() {
 //   let currentCard = 'Heart';
 //   const cards = ['Diamond', 'Spade', 'Heart', 'Club'];
 //   const randomNumber = Math.floor(Math.random() * 4);
 //   currentCard = cards[randomNumber];
-//   para.innerHTML = currentCard;
+//   return currentCard;
 // }
 
-function randomCards() {
-  /* define all card suits and values in 2 arrays */
-  const suit = ['Diamonds', 'Spades', 'Hearts', 'Clubs'];
-  const cardValue = [2, 3, 4, 5, 6, 7, 8, 9, 'T', 'J', 'Q', 'K', 'A'];
+/*
+* card values and suits randomly generated
+*/
+function randomCards2() {
 
-  /* pick random suit and value from the arrays */
-  const randomSuit = Math.floor(Math.random() * suit.length);
-  const randomCard = Math.floor(Math.random() * cardValue.length);
+  // card deck obj with all possible suits and values
+  const cardDeck = {
+    'suit': ['Diamonds', 'Spades', 'Hearts', 'Clubs'],
+    'value': [2, 3, 4, 5, 6, 7, 8, 9, 'T', 'J', 'Q', 'K', 'A']
+  };
 
-  /* output results */
-  const currentCard = cardValue[randomCard] + ' Of ' + suit[randomSuit];
-  para.innerHTML = currentCard;
+  // generate random suits and values
+  const randomSuit = Math.floor(Math.random() * cardDeck.suit.length);
+  const randomCard = Math.floor(Math.random() * cardDeck.value.length);
+
+  return currentCard = cardDeck.value[randomCard] + ' Of ' + cardDeck.suit[randomSuit];
 }
 
-btn.addEventListener("click", randomCards);
