@@ -1,3 +1,6 @@
+/*
+* find all permutations of a string
+*/
 function findAllPermutations(str) {
   let permutations = [];
 
