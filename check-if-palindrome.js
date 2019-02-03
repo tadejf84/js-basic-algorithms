@@ -20,6 +20,5 @@ function checkIfPalindrome(str) {
 
   // compare the two strings
   return str === strReverse.join('') ? true : false;
-
 }
 
