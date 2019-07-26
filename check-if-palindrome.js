@@ -6,14 +6,13 @@ function checkIfPalindrome(str) {
   let strSplit = [],
       strReverse = [];
 
+  // initial input check
+  if ( str.length < 1 ) return 'Invalid input!';
+  if ( str.length === 1) return true;
+
   // get only alphanumeric chars, to lower case and split string to array
   str = str.replace(/[^a-z0-9]/gi,'').toLowerCase();
-  const len = str.length;
   strSplit = str.split('');
-
-  // initial input check
-  if ( len < 1 ) { return 'Invalid input!'; }
-  if ( len === 1) { return true; }
 
   // reverse string
   strReverse = strSplit.reverse();
