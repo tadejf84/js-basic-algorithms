@@ -4,15 +4,14 @@
 function findAllPermutations(str) {
   let permutations = [];
 
+  // initial input check
+  if (str.length === 0) return 'You entered an empty string!';
+  if (str.length === 1) return str;
+
   // get only alphanumeric chars, to lower case and split string to array
   const arr = str.replace(/[^a-z0-9]/gi,'')
                 .toLowerCase()
                 .split('');
-  const len = arr.length;
-
-  // initial input check
-  if (len === 0) { return 'You entered an empty string!'; }
-  if (len === 1) { return str; }
 
   arr.forEach( (el, index) => {
 
