@@ -20,12 +20,9 @@ function selectionSort1(arr){
 /*
 * selection sort recursive
 */
-function selectionSort2(arr, startIndex) {
+function selectionSort2(arr, startIndex = 0) {
   let minIndex;
   const len = arr.length;
-
-  // if startIndex is not defined, set it to 0
-  if (startIndex == null) { startIndex = 0 }
 
   /*
   * while startIndex is lower than array length continue looping
