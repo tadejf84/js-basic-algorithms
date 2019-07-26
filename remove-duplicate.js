@@ -3,12 +3,23 @@
 */
 function removeDuplicateElementsFromArr(arr) {
 
-  // filter method
-  return arr.filter((el, i, self) => {
-    return self.indexOf(el) === i
-  });
+  // using a set object
+  return [...new Set(arr)];
+  
+  // by using an object for tracking
+  // const obj = {};
+  // for(let el of arr) {
+  //   obj[el] = true;
+  // }
+  // const result = Object.keys(obj);
+  // return result;
 
-  /* using map method */
+  // filter method
+  // return arr.filter((el, i, self) => {
+  //   return self.indexOf(el) === i
+  // });
+
+  // using map method
   // let arr2 = [];
   // arr.map(el => {
   //   if (arr2.indexOf(el) === -1) {
