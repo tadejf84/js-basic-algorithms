@@ -1,31 +1,35 @@
-/*
-* remove duplicate elements in array
-*/
+/**
+ * Remove duplicate elements from array
+ * 
+ * @param {array} arr 
+ * 
+ * @returns {array} unique
+ */
 function removeDuplicateElementsFromArr(arr) {
 
-  // using a set object
-  return [...new Set(arr)];
-  
-  // by using an object for tracking
-  // const obj = {};
-  // for(let el of arr) {
-  //   obj[el] = true;
-  // }
-  // const result = Object.keys(obj);
-  // return result;
+    // By using the Set object
+    return [...new Set(arr)];
+    
+    // By using an object for tracking
+    // const obj = {};
+    // for(let el of arr) {
+    //     obj[el] = true;
+    // }
+    // const result = Object.keys(obj);
+    // return result;
 
-  // filter method
-  // return arr.filter((el, i, self) => {
-  //   return self.indexOf(el) === i
-  // });
+    // Filter method
+    // return arr.filter((el, i, self) => {
+    //     return self.indexOf(el) === i
+    // });
 
-  // using map method
-  // let arr2 = [];
-  // arr.map(el => {
-  //   if (arr2.indexOf(el) === -1) {
-  //     arr2.push(el);
-  //   }
-  // });
-  // return arr2;
+    // Map method
+    // let arr2 = [];
+    // arr.map(el => {
+    //     if (arr2.indexOf(el) === -1) {
+    //         arr2.push(el);
+    //     }
+    // });
+    // return arr2;
 }
 
