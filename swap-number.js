@@ -1,20 +1,25 @@
-/*
-* swap a number
-*/
+/**
+ * Swap a number
+ * 
+ * @param {number} a 
+ * @param {number} b 
+ * 
+ * @returns {array} swapped numbers
+ */
 function swapNum(a, b) {
 
-  // with temp
+  // With temp
   // let temp;
   // temp = a;
   // a = b;
   // b = temp;
 
-  // without temp
+  // Without temp
   // b = b - a;
   // a = a + b;
   // b = a - b;
 
-  // es6 deconstructuring
+  // ES6 deconstructuring
   [a,b] = [b,a];
 
   return [a, b];
