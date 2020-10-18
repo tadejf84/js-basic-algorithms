@@ -1,18 +1,22 @@
-/*
-* find max value in array
-*/
+/**
+ * Find max value in array
+ * 
+ * @param {array} arr
+ * 
+ * @returns {number} max 
+ */
 function findMax(arr) {
 
-  // using math max and spread operator
-  return Math.max(...arr);
+    // Math max and spread operator method
+    return Math.max(...arr);
 
-  // using a map method 
-  // let max = 0;
-  // arr.map( num => {
-  //   if (num > max){
-  //     max = num;
-  //   }
-  // });
-  // return max;
+    // Map method 
+    // let max = 0;
+    // arr.map( num => {
+    //     if (num > max){
+    //         max = num;
+    //     }
+    // });
+    // return max;
 
 }
