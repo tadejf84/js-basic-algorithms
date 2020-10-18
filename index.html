@@ -38,8 +38,9 @@
 		document.addEventListener("DOMContentLoaded", () => {
 			
 			// array chunking
-			const arrayChunking = arrChunk([12, 11, 7, 13, 14, 16, 2, 22, 4], 2);
-			console.log(`Chunked array: ${arrayChunking}`);
+			const arrayChunks = arrChunk([12, 11, 7, 13, 14, 16, 2, 22, 4], 3);
+			console.log('Chunked array below:');
+			console.log(arrayChunks);
 
 			// bubble sort
 			const bubbleSorting = bubbleSort([12, 11, 7, 13, 14, 16, 2, 22, 4]);
