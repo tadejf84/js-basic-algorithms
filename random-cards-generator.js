@@ -1,30 +1,19 @@
+/**
+ * Generate random card value and suit
+ * 
+ * @returns {array} random value and suit 
+ */
+function randomCards() {
 
-/*
-* card suit randomly generated
-*/
-// function randomCards1() {
-//   let currentCard = 'Heart';
-//   const cards = ['Diamond', 'Spade', 'Heart', 'Club'];
-//   const randomNumber = Math.floor(Math.random() * 4);
-//   currentCard = cards[randomNumber];
-//   return currentCard;
-// }
+    // Card deck obj with all possible values and suits
+    const cardDeck = {
+        'value': ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'],
+        'suit': ['Diamonds', 'Spades', 'Hearts', 'Clubs']
+    };
 
-/*
-* card values and suits randomly generated
-*/
-function randomCards2() {
+    // Generate random suits and values
+    const randomValueIndex = Math.floor(Math.random() * cardDeck.value.length);
+    const randomSuitIndex = Math.floor(Math.random() * cardDeck.suit.length);
 
-  // card deck obj with all possible suits and values
-  const cardDeck = {
-    'suit': ['Diamonds', 'Spades', 'Hearts', 'Clubs'],
-    'value': [2, 3, 4, 5, 6, 7, 8, 9, 'T', 'J', 'Q', 'K', 'A']
-  };
-
-  // generate random suits and values
-  const randomSuit = Math.floor(Math.random() * cardDeck.suit.length);
-  const randomCard = Math.floor(Math.random() * cardDeck.value.length);
-
-  return currentCard = cardDeck.value[randomCard] + ' Of ' + cardDeck.suit[randomSuit];
+    return [cardDeck.value[randomValueIndex], cardDeck.suit[randomSuitIndex]];
 }
-
