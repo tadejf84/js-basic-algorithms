@@ -1,148 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
 <body>
 
-	<!-- all scripts -->
-	<script src="find-longest-word.js"></script>
-	<script src="find-duplicate-letters.js"></script>
-	<script src="word-is-permutation.js"></script>
-	<script src="word-shuffle.js"></script>
-	<script src="find-largest-number.js"></script>
-	<script src="find-peaks-1D.js"></script>
-	<script src="random-cards-generator.js"></script>
-	<script src="string-to-integer.js"></script>
-	<script src="is-prime-number.js"></script>
-	<script src="greatest-common-divisor.js"></script>
-	<script src="remove-duplicate.js"></script>
-	<script src="swap-number.js"></script>
-	<script src="string-reverse.js"></script>
-	<script src="first-non-repeating-character.js"></script>
-	<script src="remove-duplicate-from-string.js"></script>
-	<script src="check-if-palindrome.js"></script>
-	<script src="find-missing-number.js"></script>
-	<script src="find-sum-of-largest-two.js"></script>
-	<script src="find-all-permutations.js"></script>
-	<script src="bubble-sort.js"></script>
-	<script src="selection-sort.js"></script>
-	<script src="insertion-sort.js"></script>
-	<script src="max-characters.js"></script>
-	<script src="array-chunking.js"></script>
-	<script src="factorial.js"></script>
-	<script src="largest-binary-gap.js"></script>
+    <script src="find-longest-word.js"></script>
+    <script src="find-duplicate-letters.js"></script>
+    <script src="word-is-permutation.js"></script>
+    <script src="word-shuffle.js"></script>
+    <script src="find-largest-number.js"></script>
+    <script src="find-peaks-1D.js"></script>
+    <script src="random-cards-generator.js"></script>
+    <script src="string-to-integer.js"></script>
+    <script src="is-prime-number.js"></script>
+    <script src="greatest-common-divisor.js"></script>
+    <script src="remove-duplicate.js"></script>
+    <script src="swap-number.js"></script>
+    <script src="string-reverse.js"></script>
+    <script src="first-non-repeating-character.js"></script>
+    <script src="remove-duplicate-from-string.js"></script>
+    <script src="check-if-palindrome.js"></script>
+    <script src="find-missing-number.js"></script>
+    <script src="find-sum-of-largest-two.js"></script>
+    <script src="find-all-permutations.js"></script>
+    <script src="bubble-sort.js"></script>
+    <script src="selection-sort.js"></script>
+    <script src="insertion-sort.js"></script>
+    <script src="max-characters.js"></script>
+    <script src="array-chunking.js"></script>
+    <script src="factorial.js"></script>
+    <script src="largest-binary-gap.js"></script>
 
-	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-			
-			// array chunking
-			const arrayChunks = arrChunk([12, 11, 7, 13, 14, 16, 2, 22, 4], 3);
-			console.log('Chunked array below:');
-			console.log(arrayChunks);
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // Array chunking
+            const arrayChunks = arrChunk([12, 11, 7, 13, 14, 16, 2, 22, 4], 3);
+            console.log('Chunked array below:');
+            console.log(arrayChunks);
 
-			// bubble sort
-			const bubbleSorting = bubbleSort([12, 11, 7, 13, 14, 16, 2, 22, 4]);
-			console.log(`Bubble sorted array: ${bubbleSorting}`);
+            // Bubble sort
+            const bubbleSorting = bubbleSort([12, 11, 7, 13, 14, 16, 2, 22, 4]);
+            console.log(`Bubble sorted array: ${bubbleSorting}`);
 
-			// check if palindrome
-			const checkPalindrome = checkIfPalindrome('A new order began, a more Roman age bred Rowena.');
-			console.log(`Is word a palindrome: ${checkPalindrome}`);
+            // Check if palindrome
+            const checkPalindrome = checkIfPalindrome('A new order began, a more Roman age bred Rowena.');
+            console.log(`Is word a palindrome: ${checkPalindrome}`);
 
-			// find all permutations
-			const findPermutations = findAllPermutations('try');
-			console.log(`All permutations of the entered word: ${findPermutations}`);
+            // Find all permutations
+            const findPermutations = findAllPermutations('try');
+            console.log(`All permutations of the entered word: ${findPermutations}`);
 
-			// find duplicates
-			const findDuplicates = findDuplicate('See this example');
-			console.log(`Duplicated letters: ${findDuplicates}`);
+            // Find duplicates
+            const findDuplicates = findDuplicate('See this example');
+            console.log(`Duplicated letters: ${findDuplicates}`);
 
-			// find max value in array
-			const findMaxVal = findMax([6, 7, 111, 12177, 227, 13, 1890, 11]);
-			console.log(`Largest number in array: ${findMaxVal}`);
+            // Find max value in array
+            const findMaxVal = findMax([6, 7, 111, 12177, 227, 13, 1890, 11]);
+            console.log(`Largest number in array: ${findMaxVal}`);
 
-			// find longest word
-			const findLongestWord = longestWord('Test sentence once again');
-			console.log(`Longest word in the sentence is/are ${findLongestWord} and is/are ${findLongestWord[0].length} characters long`);
+            // Find longest word
+            const findLongestWord = longestWord('Test sentence once again');
+            console.log(`Longest word in the sentence is/are ${findLongestWord} and is/are ${findLongestWord[0].length} characters long`);
 
-			// find missing number in arr
-			const findMissing = findMissingNum2([1,2,4,3,5,7,9,8,10]);
-			console.log(`Missing number in array: ${findMissing}`);
+            // Find missing number in arr
+            const findMissing = findMissingNum2([1,2,4,3,5,7,9,8,10]);
+            console.log(`Missing number in array: ${findMissing}`);
 
-			// find peaks in arr
-			const findPeaksInArr = findPeaks([8, 6, 7, 7, 111, 1217, 227, 13, 189, 11, 117, 888]);
-			console.log(`Array peaks: ${findPeaksInArr}`);
+            // Find peaks in arr
+            const findPeaksInArr = findPeaks([8, 6, 7, 7, 111, 1217, 227, 13, 189, 11, 117, 888]);
+            console.log(`Array peaks: ${findPeaksInArr}`);
 
-			// find sum of largest two
-			const findSumOfLargestTwo = findSumOfTwo([1, 37, 133, 69, 6, 91, 8, 10]);
-			console.log(`Sum of largest two numbers in array: ${findSumOfLargestTwo}`);
+            // Find sum of largest two
+            const findSumOfLargestTwo = findSumOfTwo([1, 37, 133, 69, 6, 91, 8, 10]);
+            console.log(`Sum of largest two numbers in array: ${findSumOfLargestTwo}`);
 
-			// find first non repeating char
-			const findFirstChar = firstNonRepeatingChar('test this awesome sentence');
-			console.log(`First non repeating char in the string is: ${findFirstChar}`);
+            // Find first non repeating char
+            const findFirstChar = firstNonRepeatingChar('test this awesome sentence');
+            console.log(`First non repeating char in the string is: ${findFirstChar}`);
 
-			// find greatest common divisor
-			const greatestCommonDivisor = greatestCommonDiv(7, 21);
-			console.log(`Greatest common divisor is: ${greatestCommonDivisor}`);
+            // Find greatest common divisor
+            const greatestCommonDivisor = greatestCommonDiv(7, 21);
+            console.log(`Greatest common divisor is: ${greatestCommonDivisor}`);
 
-			// insertion sort array
-			const insertionSortArr = insertionSort([12, 11, 7, 4, 13, 14, 16, 2, 22]);
-			console.log(`Insertion sorted array: ${insertionSortArr}`);
+            // Insertion sort array
+            const insertionSortArr = insertionSort([12, 11, 7, 4, 13, 14, 16, 2, 22]);
+            console.log(`Insertion sorted array: ${insertionSortArr}`);
 
-			// check if number is prime
-			const isNumPrime = isPrimeNumber(17);
-			console.log(`Is number prime: ${isNumPrime}`);
+            // Check if number is prime
+            const isNumPrime = isPrimeNumber(17);
+            console.log(`Is number prime: ${isNumPrime}`);
 
-			// find char with most occurences
-			const findMaxChar = maxChar('Houston, we have a problem!');
-			console.log(`Character with most occurences is ${findMaxChar[0]} and can be found ${findMaxChar[1]} times.`);
+            // Find char with most occurences
+            const findMaxChar = maxChar('Houston, we have a problem!');
+            console.log(`Character with most occurences is ${findMaxChar[0]} and can be found ${findMaxChar[1]} times.`);
 
-			// random cards generator
-			const randomCard = randomCards();
-			console.log(`Your random card is ${randomCard[0]} of ${randomCard[1]}.`);
+            // Random cards generator
+            const randomCard = randomCards();
+            console.log(`Your random card is ${randomCard[0]} of ${randomCard[1]}.`);
 
-			// remove duplicates from string
-			const uniqueChars = removeDuplicateLettersFromString('this is an example sentence');
-			console.log(`Unique chars in string: ${uniqueChars}`);
+            // Remove duplicates from string
+            const uniqueChars = removeDuplicateLettersFromString('this is an example sentence');
+            console.log(`Unique chars in string: ${uniqueChars}`);
 
-			// remove duplicates from array
-			const uniqueArr = removeDuplicateElementsFromArr([4, 7, 7, 3, 'test', 12, 'test', 3]);
-			console.log(`Unique array: ${uniqueArr}`);
+            // Remove duplicates from array
+            const uniqueArr = removeDuplicateElementsFromArr([4, 7, 7, 3, 'test', 12, 'test', 3]);
+            console.log(`Unique array: ${uniqueArr}`);
 
-			// selection sort
-			const selectionSortArr = selectionSort2([12, 11, 7, 13, 14, 16, 2, 22]);
-			console.log(`Selection sorted array: ${selectionSortArr}`);
+            // Selection sort
+            const selectionSortArr = selectionSort2([12, 11, 7, 13, 14, 16, 2, 22]);
+            console.log(`Selection sorted array: ${selectionSortArr}`);
 
-			// reverse string
-			const stringReversed = stringReverse('example sentence');
-			console.log(`Reversed string: ${stringReversed}`);
+            // Reverse string
+            const stringReversed = stringReverse('example sentence');
+            console.log(`Reversed string: ${stringReversed}`);
 
-			// string to integer
-			const stringToInteger = stringToInt('105');
-			console.log(`The string ${stringToInteger} was converted to a ${typeof stringToInteger}.`);
+            // String to integer
+            const stringToInteger = stringToInt('105');
+            console.log(`The string ${stringToInteger} was converted to a ${typeof stringToInteger}.`);
 
-			// swap a number
-			const numSwapped = swapNum(3,5);
-			console.log(`Swapped numbers: ${numSwapped}`);
+            // Swap a number
+            const numSwapped = swapNum(3,5);
+            console.log(`Swapped numbers: ${numSwapped}`);
 
-			// is word permutation
-			const isWordPermutation = isPermutation('test', 'tset');
-			console.log(`Is word permutation: ${isWordPermutation}`);
+            // Is word permutation
+            const isWordPermutation = isPermutation('test', 'tset');
+            console.log(`Is word permutation: ${isWordPermutation}`);
 
-			// shuffle words in sentence
-			const wordShuffled = wordShuffle('test this awesome sentence');
-			console.log(`Words shuffled: ${wordShuffled}`);
+            // Shuffle words in sentence
+            const wordShuffled = wordShuffle('test this awesome sentence');
+            console.log(`Words shuffled: ${wordShuffled}`);
 
-			// calculate
-			const factorialOutput = factorial(5);
-			console.log(`Factorial: ${factorialOutput}`);
+            // Calculate factorial
+            const factorialOutput = factorial(5);
+            console.log(`Factorial: ${factorialOutput}`);
 
-			// largest binary gap
-			const largestBinGap = largestBinaryGap(11342);
-			console.log(`Largest binary gap: ${largestBinGap}`);
+            // largest binary gap
+            const largestBinGap = largestBinaryGap(11342);
+            console.log(`Largest binary gap: ${largestBinGap}`);
 
-		});
-	</script>
+        });
+    </script>
 </body>
 </html>
