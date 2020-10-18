@@ -1,6 +1,10 @@
-/*
-* calculate factorial
-*/
+/**
+ * Calculate factorial
+ * 
+ * @param {number} n 
+ * 
+ * @returns {number} factorial
+ */
 function factorial(n) {
     if (n === 0) {
         return 1;
