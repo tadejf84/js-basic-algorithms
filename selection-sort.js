@@ -1,53 +1,65 @@
-/*
-* selection sort with 2 for loops
-*/
+/**
+ * Selection sort algorithm - implementation with 2 for loops
+ * 
+ * @param {array} arr 
+ * 
+ * @returns {array} sorted array
+ */
 function selectionSort1(arr){
-  let min;
-  const len = arr.length;
+    let min;
+    const len = arr.length;
 
-  for(let i = 0; i < len; i++){
-    min = i;
-    for(let j = i + 1; j < len; j++){
-       if(arr[j] < arr[min]){
-          min = j;
-       }
+    for(let i = 0; i < len; i++){
+        min = i;
+
+        for(let j = i + 1; j < len; j++){
+            if(arr[j] < arr[min]){
+                min = j;
+            }
+        }
+
+        // Swap elements in array
+        [arr[i], arr[min]]  = [arr[i], arr[min]];
     }
-    swap(arr, i, min);
-  }
-  return arr;
+
+    return arr;
 }
 
-/*
-* selection sort recursive
-*/
+
+/**
+ * Selection sort algorithm - recursive implementation
+ * 
+ * @param {array} arr 
+ * @param {number} startIndex
+ * 
+ * @returns {array} sorted array
+ */
 function selectionSort2(arr, startIndex = 0) {
-  let minIndex;
-  const len = arr.length;
+    let minIndex;
+    const len = arr.length;
 
-  /*
-  * while startIndex is lower than array length continue looping
-  * if current iteration lower array value lower than lowest value
-  * swap lowest value with startIndex value -> lowest value goes to the beginning of the array
-  */
-  while (startIndex < len - 1) {
-    minIndex = startIndex;
-    for (let i = startIndex + 1; i < len; i++) {
-      if(arr[i] < arr[minIndex]) {
-        minIndex = i;
-      }
+    /*
+    * While startIndex is lower than array length continue looping
+    * If current iteration lower array value lower than lowest value
+    * Swap lowest value with startIndex value -> lowest value goes to the beginning of the array
+    */
+    while (startIndex < len - 1) {
+        minIndex = startIndex;
+
+        for (let i = startIndex + 1; i < len; i++) {
+            if(arr[i] < arr[minIndex]) {
+                minIndex = i;
+            }
+        }
+
+        // Swap elements in array
+        [arr[startIndex], arr[minIndex]]  = [arr[minIndex], arr[startIndex]];
+        startIndex++;
+
+        // Recursively call the function
+        selectionSort2(arr, startIndex);
     }
-    swap(arr, startIndex, minIndex);
-    startIndex++;
-    selectionSort2(arr, startIndex);
-  }
 
-  return arr;
-}
-
-// helper function swap
-function swap(arr, i, min) {
-  var temp = arr[i];
-  arr[i] = arr[min];
-  arr[min] = temp;
+    return arr;
 }
 
