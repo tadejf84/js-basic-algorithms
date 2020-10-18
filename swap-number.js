@@ -8,21 +8,21 @@
  */
 function swapNum(a, b) {
 
-  // With temp
-  // let temp;
-  // temp = a;
-  // a = b;
-  // b = temp;
+    // With temp
+    // let temp;
+    // temp = a;
+    // a = b;
+    // b = temp;
 
-  // Without temp
-  // b = b - a;
-  // a = a + b;
-  // b = a - b;
+    // Without temp
+    // b = b - a;
+    // a = a + b;
+    // b = a - b;
 
-  // ES6 deconstructuring
-  [a,b] = [b,a];
+    // ES6 deconstructuring
+    [a,b] = [b,a];
 
-  return [a, b];
+    return [a, b];
 }
 
 
